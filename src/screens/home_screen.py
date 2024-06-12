@@ -53,7 +53,7 @@ def HomeScreen(page: ft.Page):
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         blurred = cv2.GaussianBlur(gray, (7, 7), 0)
         circles = cv2.HoughCircles(blurred, cv2.HOUGH_GRADIENT, 1,
-                                   minDist=21, param1=250, param2=6, minRadius=10, maxRadius=12)
+                                   minDist=21, param1=100, param2=7, minRadius=11, maxRadius=13)
         
         if circles is not None:
             circles = circles.round().astype(int)
